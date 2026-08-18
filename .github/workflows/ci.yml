@@ -15,7 +15,7 @@ jobs:
     name: Lint, typecheck, unit tests, build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
@@ -31,7 +31,7 @@ jobs:
     name: Row-level security
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       # ubuntu-latest ships PostgreSQL 16 binaries; the script starts its own
       # throwaway cluster, so no service container is needed.
       - run: npm run test:rls
@@ -40,7 +40,7 @@ jobs:
     name: End-to-end
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
