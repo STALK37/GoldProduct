@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 8% 12%;
+    --foreground: 43 30% 85%;
+
+    --card: 30 8% 15%;
+    --card-foreground: 43 30% 85%;
+
+    --popover: 30 8% 15%;
+    --popover-foreground: 43 30% 85%;
+
+    --primary: 43 72% 55%;
+    --primary-foreground: 30 10% 8%;
+
+    --secondary: 30 8% 20%;
+    --secondary-foreground: 43 30% 85%;
+
+    --muted: 30 6% 22%;
+    --muted-foreground: 30 12% 65%;
+
+    --accent: 43 72% 55%;
+    --accent-foreground: 30 10% 8%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 43 30% 25%;
+    --input: 30 8% 20%;
+    --ring: 43 72% 55%;
+
+    --radius: 0.5rem;
+
+    --gold: 43 72% 55%;
+    --gold-light: 43 80% 70%;
+    --gold-dark: 43 60% 35%;
+    --charcoal: 30 8% 12%;
+    --charcoal-light: 30 8% 18%;
+
+    --font-display: 'Cormorant Garamond', serif;
+    --font-body: 'Raleway', sans-serif;
+
+    --sidebar-background: 30 8% 10%;
+    --sidebar-foreground: 43 30% 85%;
+    --sidebar-primary: 43 72% 55%;
+    --sidebar-primary-foreground: 30 10% 8%;
+    --sidebar-accent: 30 8% 18%;
+    --sidebar-accent-foreground: 43 30% 85%;
+    --sidebar-border: 43 30% 20%;
+    --sidebar-ring: 43 72% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .gold-gradient-text {
+    background: linear-gradient(
+      135deg,
+      hsl(43 80% 70%) 0%,
+      hsl(43 72% 55%) 50%,
+      hsl(43 60% 35%) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gold-line {
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      hsl(43 72% 55%) 50%,
+      transparent 100%
+    );
+  }
+
+  .gold-border-card {
+    border: 1px solid hsl(43 30% 25%);
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  .gold-border-card:hover {
+    border-color: hsl(43 72% 55% / 0.6);
+    box-shadow: 0 0 30px hsl(43 72% 55% / 0.08);
+  }
+}

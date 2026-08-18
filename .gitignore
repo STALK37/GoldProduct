@@ -1,0 +1,41 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Environment — .env holds live project keys, .env.example holds placeholders
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Test output
+coverage
+playwright-report
+test-results
+blob-report
+.playwright
+
+# Supabase CLI
+supabase/.branches
+supabase/.temp
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

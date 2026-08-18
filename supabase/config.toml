@@ -1,0 +1,10 @@
+# Replaced by `supabase link --project-ref <your-ref>`; the value below is a
+# placeholder so a fresh clone does not point at somebody else's project.
+project_id = "your-project-ref"
+
+[functions.telegram-notify]
+# The function reads the order back from the database itself and only ever
+# posts to the owner's own chat, so requiring a JWT adds nothing — the anon key
+# that would satisfy it is public anyway. Left on: it costs nothing and keeps
+# casual traffic off the endpoint.
+verify_jwt = true
